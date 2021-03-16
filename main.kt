@@ -1,8 +1,8 @@
 //登場キャラクターを予めキャラクタクラスのインスタンスとして宣言しておく
-val king = Character("国王")
+val king = Character("国王的な人")
 val first = Map(1)
 
-fun main(args: Array<String>) {
+fun main() {
     startingGame()
     first._mapStart()
     for (i in 1..5) {
