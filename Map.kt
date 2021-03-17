@@ -22,6 +22,11 @@ class Map(_number: Int) {
         print("コマンド（数値）を入力して下さい : ")
         //複数の入力があった場合に、適切に対応する
         val input = readLine()!!.split(" ").map(String::toInt)
+        //.split
+        // => 入力された文字列を””で囲んだ文字に応じて分割する関数
+        //.map
+        // => 配列処理。各要素一つずつに対して「コールバック関数」を実行し、その結果を新しい配列として返すことができるようになっている。
+        // => => 「コールバック関数」＝　
 
         //入力の失敗処理
         if (input[0] > this.choiceMax) {
@@ -81,16 +86,19 @@ class Map(_number: Int) {
             2 -> {
                 //アイテム
                 fieldLog("行動パターン$number")
+                println("")
             }
 
             3 -> {
                 //敵と遭遇
                 fieldLog("行動パターン$number")
+                println("Encount Battle!!")
             }
 
             4, 5, 6 -> {
                 //特になにもない
                 fieldLog("行動パターン$number")
+                println("特に何も起こらなかった。")
             }
         }
     }

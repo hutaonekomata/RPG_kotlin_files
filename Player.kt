@@ -25,3 +25,4 @@ class Player(_name: String): Character(_name) {
         }
     }
 }
+//this. => 自分自身を呼び出す。
