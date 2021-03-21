@@ -1,5 +1,5 @@
 //登場キャラクターを予めキャラクタクラスのインスタンスとして宣言しておく
-val king = Character("国王的な人")
+val king = Character("王様的な人")
 val first = Map(1)
 
 fun main() {
