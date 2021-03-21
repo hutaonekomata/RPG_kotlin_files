@@ -28,7 +28,7 @@ class Map(_number: Int) {
         val input: Int = scanner.nextInt()
 
         //入力の失敗処理
-        if (checkInt(input)) {
+        if (!checkInt(input)) {
             println("入力値に誤りがあるか、無効な入力です")
             this.waitInput()
         }
