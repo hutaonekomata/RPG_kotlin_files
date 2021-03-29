@@ -1,6 +1,6 @@
 import java.util.*
 
-val scanner = Scanner(System.`in`);
+val scanner = Scanner(System.`in`)
 
 class Map(_number: Int) {
     private val number = _number //マップの番号（解放順）
@@ -25,16 +25,16 @@ class Map(_number: Int) {
     private fun waitInput() {
         print("コマンド（数値）を入力して下さい : ")
         //複数の入力があった場合に、適切に対応する
-        val input = scanner
+        val input: Int = scanner.nextInt()
 
         //入力の失敗処理
-        if (checkInt(input)) {
-                println("入力値に誤りがあるか、無効な入力です")
-                this.waitInput()
+        if (!checkInt(input)) {
+            println("入力値に誤りがあるか、無効な入力です")
+            this.waitInput()
         }
 
         //処理の選択
-        when(input as Int) {
+        when(input) {
             1 -> {
                 //前へ進む処理
                 eventGoForward((0..6).random())
@@ -54,7 +54,7 @@ class Map(_number: Int) {
         }
     }
 
-    public fun fieldLog(message: String) {
+    private fun fieldLog(message: String) {
         println(message)
         Thread.sleep(2500)
     }
